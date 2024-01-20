@@ -19,7 +19,7 @@ def result(request):
     data = pd.read_csv(r'C:\Users\sukhm\OneDrive\Desktop\diabetes-prediction-system\DiabetesPrediction\DiabetesPrediction\DiabetesPrediction\diabetes.csv')
     x = data.drop('Outcome', axis=1)
     y = data['Outcome']
-    xtrain, xtest, ytrain, ytest = train_test_split(x, y, test_size=.2, random_state=0)
+    xtrain, xtest, ytrain, ytest = train_test_split(x, y, test_size=.2)
     lr = LogisticRegression()
     lr.fit(xtrain, ytrain)
 
